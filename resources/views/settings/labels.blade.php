@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-    Update Label Settings
+    {{ trans('admin/settings/general.update_label_settings') }}
     @parent
 @stop
 

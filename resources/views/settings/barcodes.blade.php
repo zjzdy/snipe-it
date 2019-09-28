@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-    Update Barcode Settings
+    {{ trans('admin/settings/general.update_barcode_settings') }}
     @parent
 @stop
 
@@ -99,14 +99,14 @@
                             </div>
                             <div class="col-md-9">
                                 @if ($setting->qr_code == 1)
-                                    {{ Form::text('qr_text', Input::old('qr_text', $setting->qr_text), array('class' => 'form-control','placeholder' => 'Property of Your Company',
+                                    {{ Form::text('qr_text', Input::old('qr_text', $setting->qr_text), array('class' => 'form-control','placeholder' => trans('admin/settings/general.qr_text_placeholder'),
                                     'rel' => 'txtTooltip',
-                                    'title' =>'Extra text that you would like to display on your labels. ',
+                                    'title' =>trans('admin/settings/general.qr_text_title'),
                                     'data-toggle' =>'tooltip',
                                     'data-placement'=>'top')) }}
                                     {!! $errors->first('qr_text', '<span class="alert-msg">:message</span>') !!}
                                 @else
-                                    {{ Form::text('qr_text', Input::old('qr_text', $setting->qr_text), array('class' => 'form-control', 'disabled'=>'disabled','placeholder' => 'Property of Your Company')) }}
+                                    {{ Form::text('qr_text', Input::old('qr_text', $setting->qr_text), array('class' => 'form-control', 'disabled'=>'disabled','placeholder' => trans('admin/settings/general.qr_text_placeholder'))) }}
                                     <p class="help-block">{{ trans('admin/settings/general.qr_help') }}</p>
                                 @endif
                             </div>

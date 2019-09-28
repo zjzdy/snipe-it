@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-   OAuth API Settings
+    {{ trans('admin/settings/general.oauth_api_settings') }}
     @parent
 @stop
 

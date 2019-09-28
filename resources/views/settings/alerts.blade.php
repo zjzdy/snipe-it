@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-    Update Alert Settings
+    {{ trans('admin/settings/general.update_alert_settings') }}
     @parent
 @stop
 
@@ -73,7 +73,7 @@
                                 {{ Form::text('alert_email', Input::old('alert_email', $setting->alert_email), array('class' => 'form-control','placeholder' => 'admin@yourcompany.com')) }}
                                 {!! $errors->first('alert_email', '<span class="alert-msg">:message</span><br>') !!}
 
-                                <p class="help-block">Email addresses or distribution lists you want alerts to be sent to, comma separated</p>
+                                <p class="help-block">{{ trans('admin/settings/general.alert_email_help') }}</p>
 
 
                             </div>

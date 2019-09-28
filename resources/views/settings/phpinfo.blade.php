@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-    PHP Info
+    {{ trans('admin/settings/general.php_info') }}
     @parent
 @stop
 

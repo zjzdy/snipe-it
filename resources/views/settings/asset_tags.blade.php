@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-    Update Asset Tag Settings
+    {{ trans('admin/settings/general.update_asset_tag_settings') }}
     @parent
 @stop
 

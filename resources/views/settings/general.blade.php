@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-    Update General Settings
+    {{ trans('admin/settings/general.update_general_settings') }}
     @parent
 @stop
 
@@ -212,11 +212,11 @@
                        <!-- Mail test -->
                        <div class="form-group">
                            <div class="col-md-3">
-                               {{ Form::label('login_note', 'Test Mail') }}
+                               {{ Form::label('login_note', trans('admin/settings/general.test_mail')) }}
                            </div>
                            <div class="col-md-9" id="mailtestrow">
                                <a class="btn btn-default btn-sm pull-left" id="mailtest" style="margin-right: 10px;">
-                                   Send Test</a>
+                                   {{ trans('admin/settings/general.send_test_mail') }}</a>
                                <span id="mailtesticon"></span>
                                <span id="mailtestresult"></span>
                                <span id="mailteststatus"></span>
@@ -225,7 +225,7 @@
                                <div id="mailteststatus-error" class="text-danger"></div>
                            </div>
                            <div class="col-md-9 col-md-offset-3">
-                               <p class="help-block">This will attempt to send a test mail to {{ config('mail.reply_to.address') }}.</p>
+                               <p class="help-block">{{ trans('admin/settings/general.test_mail_help') }} {{ config('mail.reply_to.address') }}.</p>
                            </div>
 
                        </div>

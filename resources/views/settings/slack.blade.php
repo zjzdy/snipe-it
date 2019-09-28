@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-    Update Slack Settings
+    {{ trans('admin/settings/general.update_slack_settings') }}
     @parent
 @stop
 

@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-    Update Branding Settings
+    {{ trans('admin/settings/general.update_branding_settings') }}
     @parent
 @stop
 
@@ -34,7 +34,7 @@
             <div class="panel box box-default">
                 <div class="box-header with-border">
                     <h4 class="box-title">
-                        <i class="fa fa-copyright"></i> Branding
+                        <i class="fa fa-copyright"></i> {{ trans('admin/settings/general.branding') }}
                     </h4>
                 </div>
                 <div class="box-body">
@@ -89,7 +89,7 @@
                                 {{ Form::label('brand', trans('admin/settings/general.brand')) }}
                             </div>
                             <div class="col-md-9">
-                                {!! Form::select('brand', array('1'=>'Text','2'=>'Logo','3'=>'Logo + Text'), Input::old('brand', $setting->brand), array('class' => 'form-control select2', 'style'=>'width: 150px ;')) !!}
+                                {!! Form::select('brand', array('1'=>trans('admin/settings/general.text'),'2'=>trans('admin/settings/general.logo'),'3'=>trans('admin/settings/general.logo_with_text')), Input::old('brand', $setting->brand), array('class' => 'form-control select2', 'style'=>'width: 150px ;')) !!}
                                 {!! $errors->first('brand', '<span class="alert-msg">:message</span>') !!}
                             </div>
                         </div>
@@ -153,11 +153,11 @@
                             </div>
                             <div class="col-md-9">
                                 @if (config('app.lock_passwords')===true)
-                                    {{ Form::textarea('custom_css', Input::old('custom_css', $setting->custom_css), array('class' => 'form-control','placeholder' => 'Add your custom CSS','disabled'=>'disabled')) }}
+                                    {{ Form::textarea('custom_css', Input::old('custom_css', $setting->custom_css), array('class' => 'form-control','placeholder' => trans('admin/settings/general.add_your_custom_css'),'disabled'=>'disabled')) }}
                                     {!! $errors->first('custom_css', '<span class="alert-msg">:message</span>') !!}
                                     <p class="help-block">{{ trans('general.lock_passwords') }}</p>
                                 @else
-                                    {{ Form::textarea('custom_css', Input::old('custom_css', $setting->custom_css), array('class' => 'form-control','placeholder' => 'Add your custom CSS')) }}
+                                    {{ Form::textarea('custom_css', Input::old('custom_css', $setting->custom_css), array('class' => 'form-control','placeholder' => trans('admin/settings/general.add_your_custom_css'))) }}
                                     {!! $errors->first('custom_css', '<span class="alert-msg">:message</span>') !!}
                                 @endif
                                 <p class="help-block">{{ trans('admin/settings/general.custom_css_help') }}</p>
@@ -172,9 +172,9 @@
                             </div>
                             <div class="col-md-9">
                                 @if (config('app.lock_passwords')===true)
-                                    {!! Form::select('support_footer', array('on'=>'Enabled','off'=>'Disabled','admin'=>'Superadmin Only'), Input::old('support_footer', $setting->support_footer), ['class' => 'form-control select2 disabled', 'style'=>'width: 150px ;', 'disabled' => 'disabled']) !!}
+                                    {!! Form::select('support_footer', array('on'=>trans('admin/settings/general.enabled'),'off'=>trans('admin/settings/general.disabled'),'admin'=>trans('admin/settings/general.superadmin_only')), Input::old('support_footer', $setting->support_footer), ['class' => 'form-control select2 disabled', 'style'=>'width: 150px ;', 'disabled' => 'disabled']) !!}
                                 @else
-                                    {!! Form::select('support_footer', array('on'=>'Enabled','off'=>'Disabled','admin'=>'Superadmin Only'), Input::old('support_footer', $setting->support_footer), array('class' => 'form-control select2', 'style'=>'width: 150px ;')) !!}
+                                    {!! Form::select('support_footer', array('on'=>trans('admin/settings/general.enabled'),'off'=>trans('admin/settings/general.disabled'),'admin'=>trans('admin/settings/general.superadmin_only')), Input::old('support_footer', $setting->support_footer), array('class' => 'form-control select2', 'style'=>'width: 150px ;')) !!}
                                 @endif
 
                                 <p class="help-block">{{ trans('admin/settings/general.support_footer_help') }}</p>
@@ -190,9 +190,9 @@
                             </div>
                             <div class="col-md-9">
                                 @if (config('app.lock_passwords')===true)
-                                    {!! Form::select('version_footer', array('on'=>'Enabled','off'=>'Disabled','admin'=>'Superadmin Only'), Input::old('version_footer', $setting->version_footer), ['class' => 'form-control select2 disabled', 'style'=>'width: 150px ;', 'disabled' => 'disabled']) !!}
+                                    {!! Form::select('version_footer', array('on'=>trans('admin/settings/general.enabled'),'off'=>trans('admin/settings/general.disabled'),'admin'=>trans('admin/settings/general.superadmin_only')), Input::old('version_footer', $setting->version_footer), ['class' => 'form-control select2 disabled', 'style'=>'width: 150px ;', 'disabled' => 'disabled']) !!}
                                 @else
-                                    {!! Form::select('version_footer', array('on'=>'Enabled','off'=>'Disabled','admin'=>'Superadmin Only'), Input::old('version_footer', $setting->version_footer), array('class' => 'form-control select2', 'style'=>'width: 150px ;')) !!}
+                                    {!! Form::select('version_footer', array('on'=>trans('admin/settings/general.enabled'),'off'=>trans('admin/settings/general.disabled'),'admin'=>trans('admin/settings/general.superadmin_only')), Input::old('version_footer', $setting->version_footer), array('class' => 'form-control select2', 'style'=>'width: 150px ;')) !!}
                                 @endif
 
                                 <p class="help-block">{{ trans('admin/settings/general.version_footer_help') }}</p>
@@ -210,7 +210,7 @@
                                     {{ Form::textarea('footer_text', Input::old('footer_text', $setting->footer_text), array('class' => 'form-control', 'rows' => '4', 'placeholder' => 'Optional footer text','disabled'=>'disabled')) }}
                                     <p class="help-block">{{ trans('general.lock_passwords') }}</p>
                                 @else
-                                    {{ Form::textarea('footer_text', Input::old('footer_text', $setting->footer_text), array('class' => 'form-control','rows' => '4','placeholder' => 'Optional footer text')) }}
+                                    {{ Form::textarea('footer_text', Input::old('footer_text', $setting->footer_text), array('class' => 'form-control','rows' => '4','placeholder' => trans('admin/settings/general.optional_footer_text')))) }}
                                 @endif
                                 <p class="help-block">{!! trans('admin/settings/general.footer_text_help') !!}</p>
                                  {!! $errors->first('footer_text', '<span class="alert-msg">:message</span>') !!}

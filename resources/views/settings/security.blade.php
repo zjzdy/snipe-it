@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-    Update Security Settings
+    {{ trans('admin/settings/general.update_security_settings') }}
     @parent
 @stop
 
@@ -98,16 +98,16 @@
                             <div class="col-md-9">
 
                                 {{ Form::checkbox("pwd_secure_complexity['letters']", 'letters', Input::old('pwd_secure_uncommon', strpos($setting->pwd_secure_complexity, 'letters')!==false), array('class' => 'minimal')) }}
-                                Require at least one letter <br>
+                                {{ trans('admin/settings/general.require_one_letter') }}<br>
 
                                 {{ Form::checkbox("pwd_secure_complexity['numbers']", 'numbers', Input::old('pwd_secure_uncommon', strpos($setting->pwd_secure_complexity, 'numbers')!==false), array('class' => 'minimal')) }}
-                                Require at least one number<br>
+                                {{ trans('admin/settings/general.require_one_number') }}<br>
 
                                 {{ Form::checkbox("pwd_secure_complexity['symbols']", 'symbols', Input::old('pwd_secure_uncommon', strpos($setting->pwd_secure_complexity, 'symbols')!==false), array('class' => 'minimal')) }}
-                                Require at least one symbol<br>
+                                {{ trans('admin/settings/general.require_one_symbol') }}<br>
 
                                 {{ Form::checkbox("pwd_secure_complexity['case_diff']", 'case_diff', Input::old('pwd_secure_uncommon', strpos($setting->pwd_secure_complexity, 'case_diff')!==false), array('class' => 'minimal')) }}
-                                Require at least one uppercase and one lowercase
+                                {{ trans('admin/settings/general.require_one_uppercase_lowercase') }}
 
                                 <p class="help-block">
                                     {{ trans('admin/settings/general.pwd_secure_complexity_help') }}

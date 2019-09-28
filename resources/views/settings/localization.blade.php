@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-    Update Localization Settings
+    {{ trans('admin/settings/general.update_localization_settings') }}
     @parent
 @stop
 

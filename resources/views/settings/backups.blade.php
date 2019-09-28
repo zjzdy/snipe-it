@@ -21,9 +21,9 @@
         <div class="table-responsive">
           <table class="table table-striped">
             <thead>
-              <th>File</th>
-              <th>Created</th>
-              <th>Size</th>
+              <th>{{ trans('admin/settings/general.file') }}</th>
+              <th>{{ trans('admin/settings/general.created') }}</th>
+              <th>{{ trans('admin/settings/general.size') }}</th>
               <th></th>
             </thead>
             <tbody>
@@ -65,7 +65,7 @@
 
 
       </form>
-      <p>Backup files are located in: {{ $path  }}</p>
+      <p>{{ trans('admin/settings/general.backup_locate_text') }}{{ $path  }}</p>
 
 
 
