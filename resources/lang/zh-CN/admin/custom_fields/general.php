@@ -1,6 +1,7 @@
 <?php
 
 return array(
+    'manage_custom_fields'		        => '管理自定义字段',
     'custom_fields'		        => '自定义字段',
     'field'		                => '字段',
     'about_fieldsets_title'		=> '关于字段集',
