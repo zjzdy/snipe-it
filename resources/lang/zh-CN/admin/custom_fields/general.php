@@ -23,7 +23,7 @@ return array(
     'field_custom_format_help'     => '此字段允许您使用正则表达式进行验证，它应该以 "regex:" 开头。例如, 要验证自定义字段值是否包含有效的 IMEI (15位数字), 则应使用 <code> regex:/^[0-9]{15} $/</code>。',
     'required'   		          => '必填',
     'req'   		              => '必填',
-    'used_by_models'   		    => '引用模板',
+    'used_by_models'   		    => '引用的资产型号',
     'order'   		            => '排序',
     'create_fieldset'         => '新增字段集',
     'create_field'            => '新增字段',
