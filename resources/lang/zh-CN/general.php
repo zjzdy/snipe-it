@@ -58,7 +58,7 @@
     'created_asset'			=> '新建资产',
     'created_at' 			=> '创建于',
     'updated_at' 			=> '更新日期',
-    'currency'  			=> 'RMB', // this is deprecated
+    'currency'  			=> 'CNY', // this is deprecated
     'current'  				=> '当前',
     'custom_report'         => '自定义资产报表',
     'dashboard'				=> '控制面板',
