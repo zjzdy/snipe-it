@@ -225,7 +225,7 @@ return array(
     'security_help'        => '两步验证, 密码限制',
     'groups'        => '分组',
     'groups_help'        => '账号权限分组',
-    'lcalization'        => '本地化',
+    'localization'        => '本地化',
     'localization_help'        => '语言, 日期显示',
     'notifications'        => '通知',
     'notifications_help'        => 'Email提醒',
@@ -246,5 +246,5 @@ return array(
     'phpinfo'        => 'PHP',
     'phpinfo_help'        => 'PHP系统信息',
     'purge'        => '清空数据',
-    'purge_help'        => '清空数据',
+    'purge_help'        => '清空所有数据记录',
 );
