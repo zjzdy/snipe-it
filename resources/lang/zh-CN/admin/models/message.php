@@ -3,7 +3,7 @@
 return array(
 
     'does_not_exist' => '资产型号不存在',
-    'assoc_users'	 => '该资产型号下目前还有相关的资产，不能被删除，请删除资产以后，再重试。',
+    'assoc_users'	 => '该资产型号下目前还存在相关的资产，不能被删除，请删除资产以后，再重试。',
 
 
     'create' => array(
@@ -30,7 +30,7 @@ return array(
 
     'bulkedit' => array(
         'error'   		=> '没有字段被更改，因此没有更新任何内容。',
-        'success' 		=> '模板已更新。'
+        'success' 		=> '资产型号已更新。'
     ),
 
     'bulkdelete' => array(
