@@ -148,7 +148,7 @@
     'order_number'          => '订单号',
     'page_menu'				=> '显示菜单项',
     'pagination_info'		=> '显示全部',
-    'pending'				=> '待定',
+    'pending'				=> '待处理',
     'people'				=> '组织成员',
     'per_page'				=> '每页搜索结果',
     'previous'				=> '前一页',
