@@ -115,11 +115,14 @@
       @if ($settings->qr_code=='1')
     <div class="qr_img">
       <img src="./{{ $asset->id }}/qr_code" class="qr_img">
+      @if ((($settings->alt_barcode_enabled!='1') || $settings->alt_barcode=='') && $settings->qr_text!='')
+        <strong style="padding-left: .05in">{{ $settings->qr_text }}</strong>
+      @endif
     </div>
       @endif
 
     <div class="qr_text">
-        @if ($settings->qr_text!='')
+        @if ((($settings->alt_barcode_enabled=='1') && $settings->alt_barcode!='') && $settings->qr_text!='')
         <div class="pull-left">
             <strong>{{ $settings->qr_text }}</strong>
             <br>
